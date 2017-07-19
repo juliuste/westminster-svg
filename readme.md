@@ -5,7 +5,7 @@ Generate westminster parliament charts as **[virtual-dom](https://github.com/Mat
 [![npm version](https://img.shields.io/npm/v/westminster-svg.svg)](https://www.npmjs.com/package/westminster-svg)
 [![dependency status](https://img.shields.io/david/juliuste/westminster-svg.svg)](https://david-dm.org/juliuste/westminster-svg)
 [![dev dependency status](https://img.shields.io/david/dev/juliuste/westminster-svg.svg)](https://david-dm.org/juliuste/westminster-svg#info=devDependencies)
-[![license](https://img.shields.io/github/license/juliuste/wwestminster-svg.svg?style=flat)](LICENSE)
+[![license](https://img.shields.io/github/license/juliuste/westminster-svg.svg?style=flat)](LICENSE)
 [![chat on gitter](https://badges.gitter.im/juliuste.svg)](https://gitter.im/juliuste)
 
 ## Installation

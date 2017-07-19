@@ -1,7 +1,7 @@
 {
   "name": "westminster-svg",
   "description": "Generate westminster parliament charts as virtual-dom SVG.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "parliament",
     "westminster",
