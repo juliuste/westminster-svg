@@ -11,7 +11,7 @@ const reverse = require('lodash.reverse')
 
 const proportion = 1.1 * Math.PI
 
-const radius = 0.45
+const radius = 0.42
 const middleSpace = 2/3
 
 const round = (x) => roundTo(x, 8)
