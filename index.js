@@ -5,6 +5,7 @@ const roundTo = require('lodash.round')
 const max = require('lodash.max')
 const min = require('lodash.min')
 const maxBy = require('lodash.maxby')
+const sortBy = require('lodash.sortby')
 const sumBy = require('lodash.sumby')
 const toArray = require('lodash.toarray')
 const reverse = require('lodash.reverse')
@@ -79,8 +80,8 @@ const generateWingPoints = (wingSeats, wingRows, wingColumns, startingPoint, yDi
 
 const generateCrossPoints = (crossSeats, crossRows, crossColumns, startingPoint) => {
 	const points = []
-	for(let column = 0; column < crossColumns; column++){
-		for(let row = 0; row < crossRows; row++){
+	for(let row = 0; row < crossRows; row++){
+		for(let column = 0; column < crossColumns; column++){
 			let modifier
 			if(row === crossRows - 1) modifier = ((crossRows - (crossSeats % crossRows)) % crossRows) / 2
 			else modifier = 0
@@ -88,7 +89,7 @@ const generateCrossPoints = (crossSeats, crossRows, crossColumns, startingPoint)
 				startingPoint[0] + row,
 				startingPoint[1] + column + modifier
 			])
-			if(points.length === crossSeats) return points
+			if(points.length === crossSeats) return sortBy(points, (p) => p[1])
 		}
 	}
 }

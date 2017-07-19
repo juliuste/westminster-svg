@@ -31,6 +31,7 @@
     "lodash.min": "^4.0.1",
     "lodash.reverse": "^4.0.1",
     "lodash.round": "^4.0.4",
+    "lodash.sortby": "^4.7.0",
     "lodash.sumby": "^4.6.0",
     "lodash.toarray": "^4.4.0",
     "virtual-hyperscript-svg": "^2.0.0"
