@@ -1,6 +1,6 @@
 # westminster-svg
 
-Generate westminster parliament charts as **[virtual-dom](https://github.com/Matt-Esch/virtual-dom#virtual-dom) SVG**. Design inspired by the [Wikipedia parliament charts](https://github.com/slashme/parliamentdiagram). *Play around with the [live demo](https://juliuste.github.io/westminster-svg/)!*
+Generate westminster parliament charts as **[virtual-dom](https://github.com/Matt-Esch/virtual-dom#virtual-dom) SVG**. Design inspired by the [Wikipedia parliament charts](https://github.com/slashme/parliamentdiagram). *Play around with the [__live demo__](https://juliuste.github.io/westminster-svg/)!* For "normal" parliament charts, see [parliament-svg](https://github.com/juliuste/parliament-svg).
 
 [![npm version](https://img.shields.io/npm/v/westminster-svg.svg)](https://www.npmjs.com/package/westminster-svg)
 [![dependency status](https://img.shields.io/david/juliuste/westminster-svg.svg)](https://david-dm.org/juliuste/westminster-svg)
