@@ -141,7 +141,7 @@ const generateChart = (parliament) => {
 	const headStart = [0, -(headColumns-1)/2]
 	const leftWingStart = [1, headStart[1]-middleSpace-1]
 	const rightWingStart = [1, headStart[1]+(headColumns-1)+middleSpace+1]
-	const crossStart = [1+max([leftWingColumns, rightWingColumns])+2, -(crossColumns-1)/2]
+	const crossStart = [1+max([leftWingColumns, rightWingColumns])+1, -(crossColumns-1)/2]
 
 	// console.error(headStart, leftWingStart, rightWingStart, crossStart)
 
