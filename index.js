@@ -186,6 +186,7 @@ const generate = (parliament) => {
 	const chart = generateChart(parliament)
 	const elements = chart.points.map(pointToSVG)
 	const document = svg('svg', {
+		xmlns: 'http://www.w3.org/2000/svg',
 		viewBox: [chart.dimensions.left, chart.dimensions.top, chart.dimensions.width, chart.dimensions.height].join(',')
 	}, elements)
 	return document
