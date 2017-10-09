@@ -26,6 +26,7 @@
     "dist"
   ],
   "dependencies": {
+    "jest": "^21.2.1",
     "lodash.max": "^4.0.1",
     "lodash.maxby": "^4.6.0",
     "lodash.min": "^4.0.1",
@@ -34,6 +35,7 @@
     "lodash.sortby": "^4.7.0",
     "lodash.sumby": "^4.6.0",
     "lodash.toarray": "^4.4.0",
+    "svgson": "^2.1.0",
     "virtual-hyperscript-svg": "^2.0.0"
   },
   "devDependencies": {
@@ -46,6 +48,7 @@
     "virtual-dom-stringify": "^3.0.1"
   },
   "scripts": {
+    "test": "jest",
     "bundle": "browserify -t [ babelify --presets es2015 ] docs/index.js > docs/bundle.js",
     "minify": "uglifyjs -mc --screw-ie8 -- docs/bundle.js > docs/bundle.min.js",
     "transpile": "babel index.js --presets babel-preset-es2015 --out-dir dist",
