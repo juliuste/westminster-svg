@@ -94,11 +94,11 @@ const generateCrossPoints = (crossSeats, crossRows, crossColumns, startingPoint)
 	}
 }
 
-const fillPoint = (point, party, colour) => ({
+const fillPoint = (point, party, color) => ({
 	x: round(point[0]),
 	y: round(point[1]),
 	r: radius,
-	fill: colour,
+	fill: color,
 	class: party
 })
 
@@ -107,7 +107,7 @@ const fillSidePoints = (sidePoints, side) => {
 	let start = 0
 	for(let party in side){
 		for(let i = 0; i < side[party].seats; i++){
-			filledPoints.push(fillPoint(sidePoints[start+i], party, side[party].colour))
+			filledPoints.push(fillPoint(sidePoints[start+i], party, side[party].color))
 		}
 		start += side[party].seats
 	}
