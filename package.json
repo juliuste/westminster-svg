@@ -58,5 +58,5 @@
   "engine": {
     "node": ">=4"
   },
-  "license": "MIT"
+  "license": "ISC"
 }
