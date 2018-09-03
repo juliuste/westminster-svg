@@ -1,6 +1,6 @@
 # westminster-svg
 
-Generate westminster parliament charts as **[virtual-dom](https://github.com/Matt-Esch/virtual-dom#virtual-dom) SVG**. Design inspired by the [Wikipedia parliament charts](https://github.com/slashme/parliamentdiagram). *Play around with the [__live demo__](https://juliuste.github.io/westminster-svg/)!* For "normal" parliament charts, see [parliament-svg](https://github.com/juliuste/parliament-svg).
+Generate westminster parliament charts as **[virtual-dom](https://github.com/Matt-Esch/virtual-dom#virtual-dom) SVG**. Design inspired by the [Wikipedia parliament charts](https://github.com/slashme/parliamentdiagram). *Play around with the [__live demo__](https://juliuste.github.io/westminster-svg/)!* For "normal" parliament charts, see **[parliament-svg](https://github.com/juliuste/parliament-svg)**.
 
 [![npm version](https://img.shields.io/npm/v/westminster-svg.svg)](https://www.npmjs.com/package/westminster-svg)
 [![Build Status](https://travis-ci.org/juliuste/westminster-svg.svg?branch=master)](https://travis-ci.org/juliuste/westminster-svg)
@@ -23,7 +23,7 @@ const westminsterSVG = require('westminster-svg')
 const svg = westminsterSVG(parliament)
 ```
 
-**`parliament`** is an object containing party information for all four 'sides' of the parliament: `headBench`, `left`, `crossBench` and `right`. After the [UK general election 2017](https://en.wikipedia.org/wiki/United_Kingdom_general_election,_2017) it should look as follows:
+**`parliament`** is an object containing party information for all four 'sides' of the parliament: `headBench`, `left`, `crossBench` and `right`. After the [2017 UK general election](https://en.wikipedia.org/wiki/United_Kingdom_general_election,_2017) it should look as follows:
 
 ```js
 {
