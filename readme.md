@@ -23,7 +23,7 @@ const westminsterSVG = require('westminster-svg')
 const svg = westminsterSVG(parliament)
 ```
 
-`parliament` is an object containing party information for all four 'sides' of the parliament: `headBench`, `left`, `crossBench` and `right`. After the [UK general election 2017](https://en.wikipedia.org/wiki/United_Kingdom_general_election,_2017) it should look as follows:
+**`parliament`** is an object containing party information for all four 'sides' of the parliament: `headBench`, `left`, `crossBench` and `right`. After the [UK general election 2017](https://en.wikipedia.org/wiki/United_Kingdom_general_election,_2017) it should look as follows:
 
 ```js
 {
