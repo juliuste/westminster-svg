@@ -1,13 +1,12 @@
 sudo: false
 language: node_js
-
 node_js:
   - 'stable'
   - '8'
   - '6'
 
 script:
-  - npm run build
+  - npm run transpile && npm run test && npm run build
 after_script:
   - ls -lh docs/bundle.*
 deploy:
