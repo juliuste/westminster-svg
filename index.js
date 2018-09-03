@@ -1,14 +1,14 @@
 'use strict'
 
 const svg = require('virtual-hyperscript-svg')
-const roundTo = require('lodash.round')
-const max = require('lodash.max')
-const min = require('lodash.min')
-const maxBy = require('lodash.maxby')
-const sortBy = require('lodash.sortby')
-const sumBy = require('lodash.sumby')
-const toArray = require('lodash.toarray')
-const reverse = require('lodash.reverse')
+const roundTo = require('lodash/round')
+const max = require('lodash/max')
+const min = require('lodash/min')
+const maxBy = require('lodash/maxBy')
+const sortBy = require('lodash/sortBy')
+const sumBy = require('lodash/sumBy')
+const toArray = require('lodash/toArray')
+const reverse = require('lodash/reverse')
 
 const proportion = 1.1 * Math.PI
 
