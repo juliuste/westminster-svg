@@ -36,7 +36,7 @@
         "browserify": "^16.2.2",
         "svgson": "^2.1.1",
         "tape": "^4.9.1",
-        "uglify-js": "^3.4.9",
+        "uglify-js": "^3.8.0",
         "virtual-dom": "^2.1.1",
         "virtual-dom-stringify": "^3.0.1"
     },
