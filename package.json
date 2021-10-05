@@ -30,18 +30,26 @@
 	},
 	"devDependencies": {
 		"browserify": "^17.0.0",
-		"svgson": "^5.2.1",
+		"depcheck": "^1.4.2",
+		"eslint": "^7.32.0",
+		"eslint-config-standard": "^16.0.3",
+		"eslint-plugin-import": "^2.24.2",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-promise": "^5.1.0",
 		"tape": "^5.3.1",
 		"uglify-js": "^3.14.2",
 		"virtual-dom": "^2.1.1",
 		"virtual-dom-stringify": "^3.0.1"
 	},
 	"scripts": {
-		"test": "tape test/*.js",
+		"build": "npm run bundle && npm run minify",
 		"bundle": "browserify docs/index.js > docs/bundle/index.js",
 		"minify": "uglifyjs -mc -- docs/bundle/index.js > docs/bundle/index.min.js",
-		"build": "npm run bundle && npm run minify",
-		"prepublishOnly": "npm run test"
+		"check-deps": "depcheck --ignores='webpack-cli' --ignore-dirs='bundle'",
+		"fix": "npm run lint -- --fix",
+		"lint": "eslint index.js test example docs/index.js",
+		"prepublishOnly": "npm test",
+		"test": "npm run lint && npm run check-deps && tape test/*.js"
 	},
 	"license": "ISC",
 	"engines": {
