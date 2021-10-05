@@ -1,10 +1,11 @@
 'use strict'
 
+import hFunction from 'virtual-hyperscript-svg'
 import chart from '../src/index.js'
 import tape from 'tape'
 import { normalize as n } from './util.js'
 
-import expected from './data/uk-2017.js'
+import expected from './data/uk-2017-virtual-dom.js'
 
 const parliament = {
 	headBench: {
@@ -57,8 +58,8 @@ const parliament = {
 	},
 }
 
-tape('2017 UK general election', t => {
-	const svg = chart(parliament)
+tape('2017 UK general election, custom h function', t => {
+	const svg = chart(parliament, { hFunction })
 	t.deepEqual(n(svg), n(expected))
 	t.end()
 })
