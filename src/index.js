@@ -1,12 +1,12 @@
 'use strict'
 
-const svg = require('virtual-hyperscript-svg')
-const roundTo = require('lodash/round')
-const max = require('lodash/max')
-const sortBy = require('lodash/sortBy')
-const sumBy = require('lodash/sumBy')
-const toArray = require('lodash/toArray')
-const reverse = require('lodash/reverse')
+import svg from 'virtual-hyperscript-svg'
+import roundTo from 'lodash/round.js'
+import max from 'lodash/max.js'
+import sortBy from 'lodash/sortBy.js'
+import sumBy from 'lodash/sumBy.js'
+import toArray from 'lodash/toArray.js'
+import reverse from 'lodash/reverse.js'
 
 const proportion = 1.1 * Math.PI
 
@@ -192,4 +192,4 @@ const generate = (parliament) => {
 	return document
 }
 
-module.exports = generate
+export default generate

@@ -1,9 +1,9 @@
 'use strict'
 
-const chart = require('..')
-const tape = require('tape')
+import chart from '../src/index.js'
+import tape from 'tape'
 
-const expected = require('./data/simple.json')
+import expected from './data/simple.js'
 
 const parliament = {
 	headBench: {
