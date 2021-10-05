@@ -15,7 +15,7 @@ let root = createElement(tree)
 document.querySelector('#demo-target').appendChild(root)
 
 const rerender = () => {
-	let tree2 = render()
+	const tree2 = render()
 	root = patch(root, diff(tree, tree2))
 	tree = tree2
 }

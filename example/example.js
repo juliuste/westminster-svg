@@ -5,8 +5,8 @@ const westminster = {
 	headBench: {
 		speaker: {
 			seats: 1,
-			colour: '#000'
-		}
+			colour: '#000',
+		},
 	},
 	left: {
 		labour: {
@@ -36,20 +36,20 @@ const westminster = {
 		independent: {
 			seats: 1,
 			colour: '#aadfff',
-		}
+		},
 	},
 	crossBench: {
 		dup: {
 			seats: 10,
 			colour: '#d46a4c',
-		}
+		},
 	},
 	right: {
 		conservative: {
 			seats: 317,
 			colour: '#0087dc',
-		}
-	}
+		},
+	},
 }
 
 process.stdout.write(stringify(svgify(westminster)))
