@@ -1,14 +1,13 @@
+# general
 .DS_Store
-Thumbs.db
+*.log
 
-.nvm-version
+# node-specific
 node_modules
-npm-debug.log
-dist
-
+package-lock.json
 yarn.lock
 shrinkwrap.yaml
-package-lock.json
+pnpm-lock.yaml
+dist
 
-docs/bundle.js
-docs/bundle.min.js
+/docs/bundle
