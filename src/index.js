@@ -1,6 +1,6 @@
 'use strict'
 
-import { s as svg } from 'hastscript'
+import { s as hastH } from 'hastscript'
 import roundTo from 'lodash/round.js'
 import max from 'lodash/max.js'
 import sortBy from 'lodash/sortBy.js'
@@ -174,7 +174,7 @@ const generateChart = (parliament) => {
 	}
 }
 
-const pointToSVG = (point) => svg('circle', {
+const pointToSVG = hFn => point => hFn('circle', {
 	cx: point.x,
 	cy: point.y,
 	r: point.r,
@@ -182,10 +182,17 @@ const pointToSVG = (point) => svg('circle', {
 	class: point.party,
 })
 
-const generate = (parliament) => {
+const defaults = {
+	hFunction: hastH,
+}
+
+const generate = (parliament, options = {}) => {
+	const { hFunction } = Object.assign({}, defaults, options)
+	if (typeof hFunction !== 'function') throw new Error('`hFunction` option must be a function')
+
 	const chart = generateChart(parliament)
-	const elements = chart.points.map(pointToSVG)
-	const document = svg('svg', {
+	const elements = chart.points.map(pointToSVG(hFunction))
+	const document = hFunction('svg', {
 		xmlns: 'http://www.w3.org/2000/svg',
 		viewBox: [chart.dimensions.left, chart.dimensions.top, chart.dimensions.width, chart.dimensions.height].join(','),
 	}, elements)

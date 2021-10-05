@@ -2,6 +2,7 @@
 
 import chart from '../src/index.js'
 import tape from 'tape'
+import { normalize as n } from './util.js'
 
 import expected from './data/simple.js'
 
@@ -41,7 +42,7 @@ const parliament = {
 }
 
 tape('Simple example', t => {
-	const svg = JSON.parse(JSON.stringify(chart(parliament)))
-	t.deepEqual(svg, expected)
+	const svg = chart(parliament)
+	t.deepEqual(n(svg), n(expected))
 	t.end()
 })
