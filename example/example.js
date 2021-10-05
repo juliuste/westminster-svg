@@ -1,5 +1,5 @@
 import { toHtml } from 'hast-util-to-html'
-const svgify = require('../index')
+import svgify from '../src/index.js'
 
 const westminster = {
 	headBench: {
