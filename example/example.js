@@ -1,4 +1,4 @@
-const stringify = require('virtual-dom-stringify')
+import { toHtml } from 'hast-util-to-html'
 const svgify = require('../index')
 
 const westminster = {
@@ -52,4 +52,4 @@ const westminster = {
 	},
 }
 
-process.stdout.write(stringify(svgify(westminster)))
+process.stdout.write(toHtml(svgify(westminster)))

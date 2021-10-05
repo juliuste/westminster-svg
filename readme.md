@@ -1,12 +1,14 @@
 # westminster-svg
 
-Generate westminster parliament charts as **[virtual-dom](https://github.com/Matt-Esch/virtual-dom#virtual-dom) SVG**. Design inspired by the [Wikipedia parliament charts](https://github.com/slashme/parliamentdiagram). *Play around with the [__live demo__](https://juliuste.github.io/westminster-svg/)!* For "normal" parliament charts, see **[parliament-svg](https://github.com/juliuste/parliament-svg)**.
+Generate westminster parliament charts as **[_hast_](https://github.com/syntax-tree/hast) virtual DOM SVG**. Design inspired by the [Wikipedia parliament charts](https://github.com/slashme/parliamentdiagram). *Play around with the [__live demo__](https://juliuste.github.io/westminster-svg/)!* For "normal" parliament charts, see **[parliament-svg](https://github.com/juliuste/parliament-svg)**.
 
 [![npm version](https://img.shields.io/npm/v/westminster-svg.svg)](https://www.npmjs.com/package/westminster-svg)
 [![License](https://img.shields.io/github/license/juliuste/westminster-svg.svg?style=flat)](license)
 [![Contact me](https://img.shields.io/badge/contact-email-turquoise)](mailto:mail@juliustens.eu)
 
 ## Installation
+
+**This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c): Node 12+ is needed to use it and it must be `import`ed instead of `require`d.**
 
 ```shell
 npm install --save westminster-svg
@@ -17,7 +19,7 @@ npm install --save westminster-svg
 ```js
 const westminsterSVG = require('westminster-svg')
 
-const svg = westminsterSVG(parliament)
+const virtualSvg = westminsterSVG(parliament)
 ```
 
 **`parliament`** is an object containing party information for all four 'sides' of the parliament: `headBench`, `left`, `crossBench` and `right`. After the [2017 UK general election](https://en.wikipedia.org/wiki/United_Kingdom_general_election,_2017) it should look as follows:
@@ -81,13 +83,20 @@ For the given `parliament` object, the rendered result should look like this:
 
 ![Example: House of Commons after GE 2017](https://rawgit.com/juliuste/westminster-svg/main/example/westminster.svg)
 
-If you want to convert the virtual DOM tree to HTML/SVG string, use `virtual-dom-stringify`:
+If you want to convert the [_hast_](https://github.com/syntax-tree/hast) virtual DOM tree to an SVG string, use `hast-util-to-html` (don't get confused by the name, it can also stringify SVG):
 
 ```js
-const toStr = require('virtual-dom-stringify')
-
-const svg = toStr(westminsterSVG(parliament))
+import westminsterSVG from 'parliament-svg'
+import { toHtml as toSvg } from 'hast-util-to-html'
+const virtualSvg = westminsterSVG(parliament)
+const svg = toSvg(virtualSvg)
 ```
+
+Check the [`example` directory](example) for further examples.
+
+### What if I prefer virtual-dom?
+
+If you prefer [`virtual-dom`](https://github.com/Matt-Esch/virtual-dom) over `hast`, e.g. for diffing or patching, you can use [`hast-to-hyperscript`](https://github.com/syntax-tree/hast-to-hyperscript).
 
 ## Contributing
 
