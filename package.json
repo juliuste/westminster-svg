@@ -19,11 +19,11 @@
 	"homepage": "https://github.com/juliuste/westminster-svg",
 	"repository": "juliuste/westminster-svg",
 	"bugs": "https://github.com/juliuste/westminster-svg/issues",
-	"main": "./index.js",
-	"module": "./index.js",
 	"files": [
-		"index.js"
+		"src/*"
 	],
+	"main": "src/index.js",
+	"module": "src/index.js",
 	"dependencies": {
 		"lodash": "^4.17.21",
 		"virtual-hyperscript-svg": "^2.0.0"
@@ -47,7 +47,7 @@
 		"minify": "uglifyjs -mc -- docs/bundle/index.js > docs/bundle/index.min.js",
 		"check-deps": "depcheck --ignores='webpack-cli' --ignore-dirs='bundle'",
 		"fix": "npm run lint -- --fix",
-		"lint": "eslint index.js test example docs/index.js",
+		"lint": "eslint src test example docs/index.js",
 		"prepublishOnly": "npm test",
 		"test": "npm run lint && npm run check-deps && tape test/*.js"
 	},
